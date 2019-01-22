@@ -1,0 +1,146 @@
+html, body {
+	background-image: url(images/1.png);
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+	}
+
+.parent {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    overflow: auto;  
+    }
+
+.block {
+	width: 1125px;
+    height: auto;
+    background-image: url(images/2.jpg);
+    border-radius: 5%;
+	}
+
+.row1 {
+	margin-top: 50px;
+    margin-left: 100px;
+    vertical-align: top;
+    display: inline-block;
+    width: 400px;
+	}
+
+.row2 {
+   margin-top: 50px;
+   vertical-align: top;
+   display: inline-block; 
+   }
+
+.table {
+   margin-top: 30px;
+   margin-left: 100px;
+   margin-bottom: 50px;
+ }
+
+.font{
+	font-size: 25pt;
+	line-height: 1.5;
+	text-indent: 1.5em;
+	text-align: left;
+}
+.fonttext{
+	font-size: 14pt;
+	line-height: 1.5;
+	font-style: italic;
+}
+.fonttext2{
+	font-size: 14pt;
+	line-height: 1.5;
+	font-style: italic;
+	font-weight: bold;
+}
+
+
+#myImg {
+  
+  cursor: pointer;
+  transition: 0.3s;
+   	width: 60%;
+    height: 60%;
+ 	border-radius: 50%;
+    border: 3px solid green;
+    box-shadow: 0 0 7px #666;
+ 	
+}
+
+#myImg:hover {opacity: 0.7;}
+
+
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+.modal-content, #caption { 
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
